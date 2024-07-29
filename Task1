@@ -1,0 +1,23 @@
+// Number guessing game - TASK 1
+#include <iostream>
+#include <cstdlib> 
+using namespace std;
+int main() {
+    int num = rand() % 101;
+    bool a = false;
+    int guess;
+    while (!a) {
+        cout << "Enter your guess: ";
+        cin >> guess;
+        if (guess > num)
+            cout << "Your guess is high!\n";
+        else if (guess < num)
+            cout << "Your guess is low!\n";
+        else if (guess == num) {
+            cout << "Congrats! You have guessed correctly!\n";
+            a = true;
+        }
+        else
+            cout << "Invalid!";
+    }
+}
